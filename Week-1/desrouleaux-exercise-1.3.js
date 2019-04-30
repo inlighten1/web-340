@@ -1,18 +1,18 @@
 
 /*
 ============================================
-; Title:  desrouleaux-header-test.js
+; Title:  desrouleaux exercise1.3.js
 ; Author: Lance Desrouleaux
-; Date:  13 February 2019
+; Date:  22 April 2019
 ; Modified By: Lance Desrouleaux
-; Description:
+; Description:Recreate the Module Example using your own URL and query value (name=smith)
 ;===========================================
 */
 
 const header = require('../desrouleaux-header-test.js')
 
-console.log(header.display("Lance", "Desrouleaux", "Excercise 2.2"));
-
+console.log(header.display("Lance", "Desrouleaux", "Excercise 1.3"));
+console.log('');
 
 
 

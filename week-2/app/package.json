@@ -1,0 +1,11 @@
+{
+  "name": "hello-world",
+  "author": "Lance Desrouleaux",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
