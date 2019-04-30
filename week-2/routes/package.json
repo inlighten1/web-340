@@ -1,0 +1,8 @@
+{
+  "name": "routes",
+  "author": "Lance Desrouleaux",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
