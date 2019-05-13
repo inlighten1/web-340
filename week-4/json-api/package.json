@@ -1,0 +1,12 @@
+{
+  "name": "json-API",
+  "author": "Lance Desrouleaux",
+  "private": true,
+  "title": "Batman",
+  "rating": "PG-13",
+  "movie time": "'7:00pm",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
