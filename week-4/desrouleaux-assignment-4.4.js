@@ -7,6 +7,10 @@
 ;              Node.js status codes.
 ;===========================================
 */
+const header = require('../desrouleaux-header-test.js')
+
+console.log(header.display("Lance", "Desrouleaux", "Excercise 2.2"));
+console.log('');
 
 var express = require("express");
 var http = require("http");
