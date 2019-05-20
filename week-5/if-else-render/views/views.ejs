@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 5.2</title>
+
+    <!-- jQuery reference -->
+    <script
+      type="text/javascript"
+
+      src=""
+      charset="UTF-8"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+
+
+<div role="main" class="container">
+
+
+    <br/><br/>
+
+    <h2>Name List</h2>
+
+
+<% if(names.length > 0) { %>
+
+
+
+
+    <% for (var k = 0; k < names.length; k++) { %>
+
+    <div class="alert alert-success" role="alert"><strong><%= names[k] %></strong></div>
+  <%}%>
+  <%} %>
+
+
+</div>
+
+</body>
+</html>
