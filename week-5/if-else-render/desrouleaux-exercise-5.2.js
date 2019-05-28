@@ -2,7 +2,7 @@
 
 const header = require('../desrouleaux-header-test.js')
 
-console.log(header.display("Lance", "Desrouleaux", "Excercise 5.2"));
+console.log(header.display("Lance", "Desrouleaux", "Exercise 5.2"));
 console.log('');
 
 var express = require("express");
