@@ -1,4 +1,9 @@
 
+const header = require('../desrouleaux-header-test.js')
+
+console.log(header.display("Lance", "Desrouleaux", "exercise 6.3"));
+console.log('');
+
 var express = require("express");
 
 var http = require("http");
