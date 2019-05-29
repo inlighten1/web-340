@@ -1,0 +1,77 @@
+
+<!--
+============================================
+; Title: EMS
+; Author: Lance Desrouleaux
+; Date: 5/28/19
+;Modified by: Lance Desrouleaux
+; Description: EMS index Page
+;===========================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <% include header %>
+
+  <body>
+    <% include navbar %>
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="first-slide" src="img/office1.png" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption text-left">
+                  <h1>Browse our Employee List</h1>
+                  <p>Highly talented individuals that set us apart from the competition</p>
+                  <p><a class="btn btn-lg btn-primary" href="/list" role="button">Employee List</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="second-slide" src="img/office2.jpg" alt="Second slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Add a New Employee to our Site</h1>
+                  <p>Easily add a new employee to our roster</p>
+                  <p><a class="btn btn-lg btn-primary" href="/new" role="button">Add Employee</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="third-slide" src="img/office3.jpg" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption text-right">
+                  <h1>View one of our amazing team members</h1>
+                  <p>Get a view of one of our talented team members</p>
+                  <p><a class="btn btn-lg btn-primary" href="/view" role="button">View Employee</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+      <% include footer %>
+    </div>
+
+    <% include scripts %>
+  </body>
+</html>
