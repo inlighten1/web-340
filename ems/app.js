@@ -60,6 +60,43 @@ response.render("view", {
 app.use(express.static('./'));
 
 
+
+var Employee = require(".models/employee");
+
+// mLab connection
+
+
+var mongoDB = "mongodb+srv://ldesrouleaux:Justbelieve2018!@buwebdev-cluster-1-y9ods.mongodb.net/test";
+
+mongoose.connect(mongoDB, {
+
+    useMongoClient: true
+
+});
+
+mongoose.Promise = global.Promise;
+
+var db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "MongoDB connection error: "));
+
+db.once("open", function() {
+
+    console.log("Application connected to mLab MongoDB instance");
+
+});
+
+
+var employee = new Employee({
+
+  firstName: "Jon",
+  lastName: "Carver"
+
+});
+
+
+
+
 http.createServer(app).listen(8070, function(){
   console.log("Application started on port 8070!");
 });
