@@ -3,7 +3,7 @@
 ; Title:  employee.js
 ; Author: Lance Desrouleayx
 ; Date:   4 June 2019
-; Description: File for the Fruit database model
+; Description: File for the employee database model
 ;===========================================
 */
 
