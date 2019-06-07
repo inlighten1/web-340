@@ -9,15 +9,51 @@
 ;===========================================
 -->
 
+36 lines (27 sloc)  825 Bytes
+
 <!DOCTYPE html>
 <html lang="en">
   <% include header %>
+
   <body>
     <% include navbar %>
-    <main rol="main">
-      <% include footer %>
 
-    </main>
+    <div role="main" class="container" style="width: 50%;">
+      <br /><br />
+
+      <h2>-- Employee --</h2>
+      <form method="post" action="/process">
+        <div class="form-group">
+          <label for="firstName"> First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" />
+        </div>
+        <form method="post" action="/process">
+          <div class="form-group">
+            <label for="lastName"> Last Name:</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" />
+          </div>
+          <form method="post" action="/process">
+            <div class="form-group">
+              <label for="title"> Title:</label>
+              <input type="text" class="form-control" id="title" name="title" />
+            </div>
+
+        <div class="form-group">
+          <!-- CSRF token -->
+          <input name="_csrf" value="<%= csrfToken %>" type="hidden" />
+
+          <button type="submit" class="btn btn-secondary float-right">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <br /><br />
+
+
+      <a href="/list">Return to Employee List</a>
+    </div>
+
     <% include scripts %>
   </body>
 </html>
