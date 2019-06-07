@@ -10,7 +10,12 @@ var http = require("http");
 
 var path = require("path");
 
+
 var logger = require("morgan");
+
+var helmet= require("helmet");
+
+const mongoose = require('mongoose');
 
 var app = express();
 
@@ -18,7 +23,11 @@ app.set("views", path.resolve(__dirname, "views"));
 
 app.set("view engine", "ejs");
 
+app.use(helmet.xssFilter());
+
 app.use(logger("short"));
+
+
 
 app.get('/', function(request, response){
 response.render("index", {
@@ -61,7 +70,7 @@ app.use(express.static('./'));
 
 
 
-var Employee = require(".models/employee");
+var Employee = require("./models/employee");
 
 // mLab connection
 
