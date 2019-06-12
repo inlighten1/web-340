@@ -27,6 +27,43 @@ var csrf = require("csurf");
 
 var csrfProtection = csrf({cookie: true});
 
+// static resource use
+app.use(express.static('./'));
+
+
+
+var Employee = require("./models/employee");
+
+var employee = new Employee({
+
+  firstName: "Jon",
+  lastName: "Carver"
+
+});
+
+// mLab connection
+
+
+var mongoDB = "mongodb+srv://ldesrouleaux:Justbelieve2018!@buwebdev-cluster-1-y9ods.mongodb.net/test";
+
+mongoose.connect(mongoDB, {
+
+    useMongoClient: true
+
+});
+
+mongoose.Promise = global.Promise;
+
+var db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "MongoDB connection error: "));
+
+db.once("open", function() {
+
+    console.log("Application connected to mLab MongoDB instance");
+
+});
+
 
 app.set("views", path.resolve(__dirname, "views"));
 
@@ -75,12 +112,18 @@ response.render("index", {
 
 //Setup route to list page
 app.get("/list", function(request, response) {
+  Employee.find({}, function(error, employees){
+    if(error) throw error;
+    response.render("list", {
+      title: "List page",
+      page: "list",
 
-  response.render("list", {
-    title: "List page",
-    page: "list"
+
   });
+  });
+
 });
+
 
 
 //Setup route to new page
@@ -140,46 +183,6 @@ response.render("view", {
 
   });
 });
-
-
-// static resource use
-app.use(express.static('./'));
-
-
-
-var Employee = require("./models/employee");
-
-// mLab connection
-
-
-var mongoDB = "mongodb+srv://ldesrouleaux:Justbelieve2018!@buwebdev-cluster-1-y9ods.mongodb.net/test";
-
-mongoose.connect(mongoDB, {
-
-    useMongoClient: true
-
-});
-
-mongoose.Promise = global.Promise;
-
-var db = mongoose.connection;
-
-db.on("error", console.error.bind(console, "MongoDB connection error: "));
-
-db.once("open", function() {
-
-    console.log("Application connected to mLab MongoDB instance");
-
-});
-
-
-var employee = new Employee({
-
-  firstName: "Jon",
-  lastName: "Carver"
-
-});
-
 
 
 
